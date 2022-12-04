@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">RegistroUsuarios</string>
+    <string name="empty_input_label">Este Campo esta vacio</string>
+    <string name="emoji_on_input">No se admiten emojis</string>
+    <!-- strings for login -->
+    <string name="login_title_label">Iniciar Sesión</string>
+    <string name="email_placeholder">Correo electronico: </string>
+    <string name="pass_placeholder">Contraseña: </string>
+    <string name="signup_button_label">Registrarse</string>
+    <string name="login_button_label">Ingresar</string>
+    <!-- String for register -->
+    <string name="register_appbar_laber">Registro</string>
+    <string name="confirm_pass_placeholoder">Confirmar contraseña: </string>
+    <string name="user_name_palceholder">Nombre de Usuario</string>
+    <string name="pass_dont_match">Las contraseñas no coinciden</string>
+</resources>
