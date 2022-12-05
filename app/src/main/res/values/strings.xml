@@ -13,4 +13,9 @@
     <string name="confirm_pass_placeholoder">Confirmar contraseña: </string>
     <string name="user_name_palceholder">Nombre de Usuario</string>
     <string name="pass_dont_match">Las contraseñas no coinciden</string>
+    <string name="user_item_firts_name_label">Nombre: </string>
+    <string name="user_item_last_name_label">Apellido: </string>
+    <string name="user_item_email_label">Correo: </string>
+    <string name="user_item_delete_button">Borrar: </string>
+    <string name="user_item_update_button">Actualizar: </string>
 </resources>

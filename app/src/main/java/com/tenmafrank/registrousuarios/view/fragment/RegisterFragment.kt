@@ -1,6 +1,7 @@
 package com.tenmafrank.registrousuarios.view.fragment
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -17,6 +18,7 @@ import com.tenmafrank.registrousuarios.utils.Constants
 import com.tenmafrank.registrousuarios.utils.InputValidation
 import com.tenmafrank.registrousuarios.utils.Toster
 import com.tenmafrank.registrousuarios.utils.sharedpreferences.UserApplication.Companion.preferences
+import com.tenmafrank.registrousuarios.view.activity.UsersActivity
 import com.tenmafrank.registrousuarios.viewmodel.RegisterViewModel
 import kotlinx.coroutines.launch
 
@@ -81,7 +83,7 @@ class RegisterFragment : Fragment() {
 
                 if (userNameInput.error.isNullOrEmpty() && emailInput.error.isNullOrEmpty() &&
                         passInput.error.isNullOrEmpty()){
-                    if(pass!! != passConfirm){
+                    if(pass != passConfirm){
                         passInput.error = getString(R.string.pass_dont_match)
                         passConfirmInput.error = getString(R.string.pass_dont_match)
                     }
@@ -98,7 +100,9 @@ class RegisterFragment : Fragment() {
                             }
                             else{
                                 toster.makeAToast(activity as Context,Constants.REGISTED)
-                                findNavController().popBackStack()
+                                val intent = Intent(activity, UsersActivity::class.java)
+                                val context = view?.context
+                                context?.startActivity(intent)
                             }
                         }
 
