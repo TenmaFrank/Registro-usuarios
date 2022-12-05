@@ -2,10 +2,7 @@ package com.tenmafrank.registrousuarios.model.dao
 
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
-import com.tenmafrank.registrousuarios.model.dto.LoginResponse
-import com.tenmafrank.registrousuarios.model.dto.LoginSignupRequest
-import com.tenmafrank.registrousuarios.model.dto.RegisterResponse
-import com.tenmafrank.registrousuarios.model.dto.UserListResponse
+import com.tenmafrank.registrousuarios.model.dto.*
 import com.tenmafrank.registrousuarios.utils.Constants.BASE_URL
 import retrofit2.Response
 import retrofit2.Retrofit
@@ -29,9 +26,16 @@ interface MetodosDao {
     @POST("/api/register")
     suspend fun register(@Body request: LoginSignupRequest): Response<RegisterResponse>
 
-    @Headers("accept: application/json")
     @GET("/api/users")
     suspend fun userList(@Query("page") page: Int): Response<UserListResponse>
+
+    @Headers("accept: application/json")
+    @POST("/api/users")
+    suspend fun create(@Body updateRequest: CreateUpdateRequest): Response<CreateUpdateResponse>
+
+    @Headers("accept: application/json")
+    @PUT("/api/users/2")
+    suspend fun update(@Body updateRequest: CreateUpdateRequest): Response<CreateUpdateResponse>
 }
 
 object ApiConexion {
