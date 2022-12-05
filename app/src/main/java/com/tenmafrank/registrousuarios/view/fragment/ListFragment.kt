@@ -9,6 +9,7 @@ import androidx.activity.OnBackPressedCallback
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.tenmafrank.registrousuarios.R
 import com.tenmafrank.registrousuarios.databinding.FragmentListBinding
@@ -55,6 +56,14 @@ class ListFragment : Fragment() {
             }
             else{
                 appbarText.setText(preferences.getEmailUser())
+            }
+
+            signOutButton.setOnClickListener {
+                activity?.finish()
+            }
+
+            createButton.setOnClickListener {
+                view?.findNavController()?.navigate(R.id.action_listFragment_to_createFragment)
             }
 
         }

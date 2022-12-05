@@ -16,6 +16,8 @@
     <string name="user_item_firts_name_label">Nombre: </string>
     <string name="user_item_last_name_label">Apellido: </string>
     <string name="user_item_email_label">Correo: </string>
-    <string name="user_item_delete_button">Borrar: </string>
-    <string name="user_item_update_button">Actualizar: </string>
+    <string name="user_item_job_label">Trabajo: </string>
+    <string name="user_item_delete_button">Borrar</string>
+    <string name="user_item_update_button">Actualizar</string>
+    <string name="save_button_label">Guardar</string>
 </resources>

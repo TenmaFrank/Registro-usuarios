@@ -20,7 +20,9 @@ class ListViewModel(private val savedStateHandle: SavedStateHandle): ViewModel()
                     listaAux.add(item)
                 }
             }
-            lista = listaAux
+            lista = listaAux.sortedBy {
+                it.firstName
+            }
         }
         catch (e: Exception){
             Log.e("login", "Error on api consume" + e.message)

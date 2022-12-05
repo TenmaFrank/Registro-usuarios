@@ -7,5 +7,13 @@
     <fragment
         android:id="@+id/listFragment"
         android:name="com.tenmafrank.registrousuarios.view.fragment.ListFragment"
-        android:label="ListFragment" />
+        android:label="ListFragment" >
+        <action
+            android:id="@+id/action_listFragment_to_createFragment"
+            app:destination="@id/createFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createFragment"
+        android:name="com.tenmafrank.registrousuarios.view.fragment.CreateFragment"
+        android:label="CreateFragment" />
 </navigation>
